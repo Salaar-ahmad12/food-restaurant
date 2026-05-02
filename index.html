@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maison Olive · Seasonal Mediterranean in Brooklyn</title>
+<meta name="description" content="Maison Olive is a candlelit Brooklyn restaurant serving wood-fired, seasonal Mediterranean cooking. Reserve your table tonight." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">Maison <span>Olive</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm">Reserve</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="assets/hero-dish.jpg" alt="Signature dish at Maison Olive" class="hero-bg" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow ornament fade-up">Est. 2009 · Brooklyn</p>
+    <h1 class="display fade-up" style="animation-delay:.15s">
+      A table set <br /><em>with intention.</em>
+    </h1>
+    <p class="lead fade-up" style="animation-delay:.3s">
+      Seasonal Mediterranean cooking, wood-fired and slow-poured, in a candlelit room that feels like coming home.
+    </p>
+    <div class="hero-cta fade-up" style="animation-delay:.45s">
+      <a href="#contact" class="btn btn-accent">Book a Table</a>
+      <a href="#menu" class="btn btn-outline">View the Menu</a>
+    </div>
+    <div class="scroll-hint fade-up" style="animation-delay:.7s">Scroll</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="section">
+  <div class="container grid-2">
+    <div class="story-image">
+      <img src="assets/interior.jpg" alt="Interior of Maison Olive" loading="lazy" />
+      <div class="story-badge">
+        <p class="badge-num">15 years</p>
+        <p class="badge-sub">of slow cooking & full tables</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Our Story</p>
+      <h2 class="display lg">From a small kitchen <em>to a beloved table.</em></h2>
+      <p class="muted mt">Maison Olive began with a single wood oven, a stack of borrowed cookbooks, and a stubborn belief that the best meals are unhurried.</p>
+      <p class="muted">Today, Chef Elena Marchetti and her team source from twenty-three small farms across the Hudson Valley, building a menu that changes with the light of the season.</p>
+      <div class="stats">
+        <div><p class="stat-num">23</p><p class="stat-sub">Local farms</p></div>
+        <div><p class="stat-num">★★★★★</p><p class="stat-sub">NYT Critics' Pick</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section section-secondary">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The Menu</p>
+      <h2 class="display lg">Cooked the slow way, <em>always.</em></h2>
+      <p class="muted">A seasonal selection. The full menu changes weekly with what arrives at the door.</p>
+    </div>
+
+    <div class="dish-grid">
+      <figure class="dish">
+        <img src="assets/dish-1.jpg" alt="Tonnarelli al Tartufo" loading="lazy" />
+        <figcaption><span class="tag">Signature</span><p>Tonnarelli al Tartufo</p></figcaption>
+      </figure>
+      <figure class="dish">
+        <img src="assets/dish-2.jpg" alt="Ribeye Fiorentina" loading="lazy" />
+        <figcaption><span class="tag">Wood-fired</span><p>Ribeye Fiorentina</p></figcaption>
+      </figure>
+      <figure class="dish">
+        <img src="assets/dish-3.jpg" alt="Cioccolato & Amarena" loading="lazy" />
+        <figcaption><span class="tag">Dessert</span><p>Cioccolato & Amarena</p></figcaption>
+      </figure>
+    </div>
+
+    <div class="menu-cols" id="menu-cols"></div>
+  </div>
+</section>
+
+<!-- VISIT / CONTACT -->
+<section id="visit" class="section section-dark">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow accent">Visit Us</p>
+      <h2 class="display lg light">Reserve your <em>evening.</em></h2>
+      <p class="muted-light mt">Tables open thirty days in advance. We always keep a few seats at the bar for walk-ins.</p>
+      <div class="visit-info">
+        <div>
+          <p class="info-label">Hours</p>
+          <p>Tue–Thu · 5pm – 10pm<br />Fri–Sat · 5pm – 11pm<br />Sun · 11am – 9pm<br /><span class="dim">Closed Mondays</span></p>
+        </div>
+        <div>
+          <p class="info-label">Find us</p>
+          <p>142 Hoyt Street<br />Brooklyn, NY 11217<br />(718) 555-0142</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-accent mt-lg">Book a Table</a>
+    </div>
+
+    <form id="contact" class="reservation" onsubmit="handleReservation(event)">
+      <p class="form-title">Request a reservation</p>
+      <div class="row-2">
+        <input required placeholder="Name" />
+        <input required placeholder="Phone" />
+      </div>
+      <input type="email" required placeholder="Email" />
+      <div class="row-3">
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" min="1" placeholder="Guests" required />
+      </div>
+      <textarea rows="3" placeholder="Special requests"></textarea>
+      <button type="submit" class="btn btn-light w-full">Send Request</button>
+      <p class="form-note" id="form-note"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="logo">Maison <span>Olive</span></p>
+    <p class="copy">© <span id="year"></span> · Crafted in Brooklyn</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Press</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
